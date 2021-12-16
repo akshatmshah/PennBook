@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<%- include('header') -%>
+
+    <head>
+        <title>Chats</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <script language="javascript" type="text/javascript" src="../js/startchat.js"></script>
+    </head>
+
+    <body>
+        <div class="columns">
+            <div class='column is-3'>
+                <h3 class='title has-text-centered'> Invites </h3>
+                <!-- Replaced with chat invites by a script in startchat.js -->
+                <div id="chat-invites"></div>
+            </div>
+            <div class="column is-6">
+                <h3 class='title has-text-centered'> Active Chats </h3>
+                <!-- Replaced with chatrooms by a script in startchat.js -->
+                <div id="chats"></div>
+            </div>
+            <div class="column is-3">
+                <h3 class='title has-text-centered'> Online friends </h3>
+                <!-- Replaced with online friends by a script in startchat.js -->
+                <div id="friends"></div>
+            </div>
+        </div>
+
+</html>

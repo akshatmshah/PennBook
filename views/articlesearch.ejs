@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<%- include('header') -%>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+
+    <body>
+        <section class="section pt-4">
+
+            <div class="columns">
+                <div class='column is-2'>
+                </div>
+                <div class="column is-8">
+                    <h1 class='title has-text-centered'>Article Search Results</h1>
+
+                    <% for (const item of data) { %>
+                        <div class='card mt-2'>
+                            <div class='card-content pb-0'>
+                                <div class='content has-text-centered'>
+                                    <a class='title is-4' href="<%= item.url.S %>">
+                                        <%= item.headline.S %>
+                                    </a><br>
+                                    <footer class='card-footer mt-1 '>
+                                        <% if (!liked_articles.includes(item.articleID.N)) { %>
+                                            <form
+                                                action='/articlelike?articleId=<%= item.articleID.N %>&type=2&search=<%= article_search %>'
+                                                method="post">
+                                                <button class='hidden-button'>
+                                                    <i
+                                                        class="fas fa-heart unlike remove-user-icon icon is-medium pt-1 pb-1 mr-1"></i>
+                                                </button>
+                                            </form>
+                                            <% } else { %>
+                                                <form
+                                                    action='/articlelike?articleId=<%= item.articleID.N %>&type=2&search=<%= article_search %>'
+                                                    method="post">
+                                                    <button class='hidden-button'>
+                                                        <i
+                                                            class="fas fa-heart like remove-user-icon icon is-medium pt-1 pb-1 mr-1"></i>
+                                                    </button>
+                                                </form>
+                                                <% }%>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+                <div class="column is-2">
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>

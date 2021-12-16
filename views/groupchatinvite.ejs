@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<%- include('header') -%>
+<head>
+	<title>Group Chat Invite</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+	<script language="javascript" type="text/javascript" src="../js/groupchatinvite.js"></script>
+</head>
+<body>
+	<div class='columns'>
+		<div class='column is-3'>
+		</div>
+		
+		<div class='column is-6'>
+		<h2 class='title has-text-centered'> Online Friends </h2>
+		<h3 class='title has-text-centered subtitle'> Click them to invite them to your group</h3>
+			<div class='columns'>
+				<div class='column is-8 is-offset-2'>
+				<!-- Online friends loaded into this div using script in client side groupchatinvite.js -->
+				<div id="friends"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class='column is-3'>
+		</div>
+	<div>
+
+    <div style="display:none" id="chat_id"><%= chat %></div>
+</html>

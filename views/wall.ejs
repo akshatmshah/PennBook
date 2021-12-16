@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<%- include('header') -%>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <title>User Wall</title>
+    <script language="javascript" type="text/javascript" src="../js/wall.js"></script>
+
+    <body>
+        <div class="columns is-flex -is-vcentered">
+        <div class='column is-3 first'>
+         <div id="image"></div>
+              <h1 class='mt-2 title has-text-centered'>
+                <% if (wall_first) { %>
+	            <%= wall_first + " " + wall_last%>'s Wall
+	            <% } else { %>
+	            User does not exist
+	            <% } %>
+	        </h1>
+        </div>
+        <div class="column is-6 second">
+        	<!-- Replaced with place to write post and list of posts from scripts in wall.js -->
+	        <div id="writepost"></div>
+	        <div id="posts"></div>
+        </div>
+        <div class="column is-3 third">
+	        <button class='button comment-button is-rounded has-text-centered px-6'
+	            onclick="location.href='/friendvisualizer?user=<%= wall_user%>'" type="button">Friend Visualizer</button>
+	        <!-- Replaced with friend, unfriend, accept/reject friend request, or undo friend request button from scripts in wall.js -->
+	       	<div id="friendbutton"></div>
+        	<h4 style="color:red;">
+	            <%= message %>
+	        </h4>
+        </div>
+        </div>
+        
+    
+        
+    </body>
+
+</html>

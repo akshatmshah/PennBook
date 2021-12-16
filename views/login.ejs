@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>Login</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script language="javascript" type="text/javascript" src="../js/login.js"></script>
+</head>
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-half has-text-centered">
+                <h1 class='title is-size-1-desktop has-text-centered'>User Login</h1>
+                <!-- Form for entering login information-->
+                <form action="/checklogin" method="post" class="loginform" id="loginform">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static signup starter-button">
+                                Username
+                            </a>
+                        </p>
+                        <input placeholder="Login" class="input" type="text" name="username" id="username">
+                    </div>
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static signup starter-button">
+                                Password
+                            </a>
+                        </p>
+                        <input placeholder="Password" class="input" type="password" name="password" id="password">
+                    </div>
+                    <input type="submit" class="input login-home is-rounded" value="Login">
+                </form>
+                <h4 style="color:red;" class="message">
+                    <%= message %>
+                </h4>
+                <hr>
+                <button class='button login is-rounded has-text-centered px-6' onclick="location.href='/signup'"
+                    type="button">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+</html>

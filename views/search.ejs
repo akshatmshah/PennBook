@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<%- include('header') -%>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/search.js"></script>
+
+
+    <body>
+        <section class="section pt-4">
+            <div class="columns">
+                <div class='column is-3'>
+
+                </div>
+                <div class="column is-6">
+                    <h1 class='title has-text-centered mb-0'>Search Results</h1>
+                    <h4 class='ml-0 mb-0 pt-0 pb-0 has-text-centered' style="color:red;">
+                        <%= message %>
+                    </h4>
+                    <div class='columns'>
+                        <div class='column is-offset-1'>
+                            <!-- Replaced with search results with script in search.js -->
+                            <div id="searches"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div id="friendbutton"></div>
+
+                </div>
+            </div>
+
+
+        </section>
+    </body>
+
+</html>

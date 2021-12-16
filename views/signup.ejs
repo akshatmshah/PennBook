@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>Sign Up</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script language="javascript" type="text/javascript" src="../js/signup.js"></script>
+</head>
+
+<body>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half has-text-centered">
+                    <h1 class='title is-size-1-desktop has-text-centered'>Account Signup</h1>
+                    <!-- Form used to sign up for an account -->
+                    <form action="/createaccount" method="post">
+                        <span class='is-normal'>
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <a class="button is-static signup">
+                                        Username
+                                    </a>
+                                </p>
+                                <input class="input" type="text" name="username" id="username">
+                            </div>
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <a class="button is-static signup">
+                                        Password
+                                    </a>
+                                </p>
+                                <input class="input" type="text" name="password" id="password">
+                            </div>
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <a class="button is-static signup">
+                                        First name
+                                    </a>
+                                </p>
+                                <input class="input" type="text" name="first" id="first">
+                            </div>
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <a class="button is-static signup">
+                                        Last name
+                                    </a>
+                                </p>
+                                <input class="input" type="text" name="last" id="last">
+                            </div>
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <a class="button is-static signup">
+                                        Email
+                                    </a>
+                                </p>
+                                <input class="input" type="text" name="email" id="email">
+                            </div>
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <a class="button is-static signup">
+                                        Birthday
+                                    </a>
+                                </p>
+                                <input class="input" type="text" name="birthday" id="birthday" placeholder="mm/dd/yyyy">
+                            </div>
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <a class="button is-static signup">
+                                        Affiliation
+                                    </a>
+                                </p>
+                                <input class="input" type="text" name="affiliation" id="affiliation">
+                            </div>
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <a class="button is-static interest mt-2">
+                                        Interests
+                                    </a>
+                                </p>
+                                <br>
+                            </div>
+                                <input type="checkbox" name="interests" value="ARTS"> Arts
+							    <input type="checkbox" name="interests" value="ARTS & CULTURE"> Arts & Culture
+							    <input type="checkbox" name="interests" value="BLACK VOICES"> Black Voices
+							    <input type="checkbox" name="interests" value="BUSINESS"> Business
+							    <input type="checkbox" name="interests" value="COLLEGE"> College
+							    <input type="checkbox" name="interests" value="COMEDY"> Comedy
+							    <input type="checkbox" name="interests" value="CRIME"> Crime <br>
+							    <input type="checkbox" name="interests" value="CULTURE & ARTS"> Culture & Arts
+							    <input type="checkbox" name="interests" value="DIVORCE"> Divorce
+							    <input type="checkbox" name="interests" value="EDUCATION"> Education
+							    <input type="checkbox" name="interests" value="ENTERTAINMENT"> Entertainment
+							    <input type="checkbox" name="interests" value="ENVIRONMENT"> Environment
+							    <input type="checkbox" name="interests" value="FIFTY"> Fifty<br>
+							    <input type="checkbox" name="interests" value="FOOD & DRINK"> Food & Drink
+							    <input type="checkbox" name="interests" value="GREEN"> Green
+							    <input type="checkbox" name="interests" value="HEALTHY LIVING"> Healthy Living
+							    <input type="checkbox" name="interests" value="HOME & LIVING"> Home & Living
+							    <input type="checkbox" name="interests" value="IMPACT"> Impact
+							    <input type="checkbox" name="interests" value="LATINO VOICES"> Latino Voices <br>
+							    <input type="checkbox" name="interests" value="MEDIA"> Media
+							    <input type="checkbox" name="interests" value="MONEY"> Money
+							    <input type="checkbox" name="interests" value="PARENTING"> Parenting
+							    <input type="checkbox" name="interests" value="PARENTS"> Parents
+							    <input type="checkbox" name="interests" value="POLITICS"> Politics
+							    <input type="checkbox" name="interests" value="QUEER VOICES"> Queer Voices
+							    <input type="checkbox" name="interests" value="RELIGION"> Religion
+							    <input type="checkbox" name="interests" value="SCIENCE"> Science<br>
+							    <input type="checkbox" name="interests" value="SPORTS"> Sports
+							    <input type="checkbox" name="interests" value="STYLE"> Style
+							    <input type="checkbox" name="interests" value="STYLE & BEAUTY"> Style & Beauty
+							    <input type="checkbox" name="interests" value="TASTE"> Taste
+							    <input type="checkbox" name="interests" value="TECH"> Tech
+							    <input type="checkbox" name="interests" value="THE WORLDPOST"> The Worldpost
+							    <input type="checkbox" name="interests" value="TRAVEL"> Travel
+							    <input type="checkbox" name="interests" value="WEDDINGS"> Weddings <br>
+							    <input type="checkbox" name="interests" value="WEIRD NEWS"> Weird News
+							    <input type="checkbox" name="interests" value="WELLNESS"> Wellness
+							    <input type="checkbox" name="interests" value="WOMEN"> Women
+							    <input type="checkbox" name="interests" value="WORLD NEWS"> World News
+							    <input type="checkbox" name="interests" value="WORLDPOST"> Worldpost
+                            <input class="input login-home is-rounded" type="submit" value="Sign Up">
+                    </form>
+                    </span>
+                    <h4 style="color:red;"><%= message %></h4>
+                    <hr>
+                    <button class='button login is-dark is-rounded has-text-centered px-6' onclick="location.href='/'" type="button">Back to Login</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<%- include('header') -%>
+    <html>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/home.js"></script>
+
+    <head>
+        <title>Home Page</title>
+    </head>
+
+    <body>
+        <div class="columns">
+            <div class="column is-one-quarter first">
+                <article class="panel is-info pt-4 mx-4">
+                	<!-- Loaded with friends, friend suggestions, incoming/outgoing friend requests from scripts in home.js -->
+                    <p class="panel-heading">
+                        Friends
+                    </p>
+                    <div class="friends-panel">
+                        <div id="friends"></div>
+                    </div>
+                    <p class="panel-heading">Friend Suggestions</p>
+                    <div>
+                        <div id="suggestions">
+                        </div>
+                    </div>
+                    <p class="panel-heading">Incoming Friend Requests</p>
+                    <div>
+                        <div id="requests"></div>
+                    </div>
+                    <p class="panel-heading">Outgoing Friend Requests</p>
+                    <div>
+                        <div id="sent_requests"></div>
+                    </div>
+                </article>
+            </div>
+            <div class="column second">
+             <h4 class='has-text-centered pb-0 mt-0 pt-0 mb-0'style="color:red;">
+                    <%= message %>
+                </h4>
+            <div class='columns'>
+            <div class='column is-10 is-offset-1'>
+			    <form action="/wallpost?user=<%= username%>&type=1" method="post" class="updateform">
+					<textarea class ="textarea mt-4" placeholder="Write your post" type="text" name="content" id="content"></textarea>
+					<footer class='card-footer'>
+						<input type="submit" class="input post-home comment-button" value="Post">
+            					</footer>
+            
+				</form>
+             
+            </div>
+            </div>
+           
+                <div id="posts"></div>
+            </div>
+            <div class="column is-one-quarter third">
+                <div class="navbar-start">
+                    <form action="/articlesearch" method="get">
+                        <input class="input px-1 mt-3 ml-4" placeholder="Search Articles" name="articlesearch"
+                            id="articlesearch"></input>
+                    </form>
+                </div>
+                <div></div>
+                <!-- Loaded with article recommendations from script in home.js -->
+                <div id="recommendations"></div>
+            </div>
+        </div>
+
+    </body>
+
+    </html>

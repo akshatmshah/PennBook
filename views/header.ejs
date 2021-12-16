@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<script src="https://kit.fontawesome.com/879f759e71.js" crossorigin="anonymous"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<script language="javascript" type="text/javascript" src="../js/header.js"></script>
+<link rel="stylesheet" href="css/base.css">
+<nav class="navbar mb-3" role="navigation" aria-label="main navigation">
+    <!-- Penn Book logo, links back to the home page -->
+    <div class="navbar-brand">
+        <a href="/home">
+            <img class='is-rounded' src='https://g29profilepictures.s3.amazonaws.com/Logo.png' width="60" height=40">
+        </a>
+    </div>
+
+    <!-- User search bar, calls getSuggestions from header.js every time the user lifts a key up while typing -->
+    <div class="navbar-start">
+        <form action="/search" method="get">
+            <input class="input px-1 mt-2 ml-4" placeholder="Search PennBook" name="search" id="search"
+                onKeyUp="getSuggestions()"></input>
+        </form>
+    </div>
+    <!-- Navigation pane, has links to home, wall, and chats -->
+    <div class="navbar-item icon-text mr-6">
+        <button class="header-button is-rounded button mr-2" onclick="location.href='/'">
+            <span class="icon is-medium mr-1">
+                <i class="fas fa-home fa-2x header-icon"></i>
+            </span>
+            <span class="ml-1">Home</span>
+        </button>
+        <button class="header-button is-rounded button mr-2" onclick="location.href='/wall'">
+            <span class="icon is-medium">
+                <i class="fas fa-user fa-2x header-icon"></i>
+            </span>
+            <span>Profile</span>
+        </button>
+        <button class="header-button is-rounded button" onclick="location.href='/startchat'">
+            <span class="icon is-medium">
+                <i class="fas fa-comments fa-2x header-icon"></i>
+            </span>
+            <span class="ml-1">Chats</span>
+        </button>
+    </div>
+    <!-- Far right of the navigation pane, has links to preferences, and logout -->
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+                <a href="/profile" class="is-rounded button is-dark">
+                    Preferences
+                </a>
+                <a href="/logout" class="is-rounded button is-dark">
+                    Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

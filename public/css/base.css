@@ -1,0 +1,247 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+.content.is-vcentered {
+    display: auto;
+    flex-wrap: wrap;
+    align-content: center;
+    /* commenting this out, the multiple lines will have gaps */
+    align-items: center;
+    /* commenting this out, the one-line will not align */
+}
+
+div.friends-panel {
+    overflow-x: hidden !important;
+}
+
+.unlike {
+    color: white;
+    outline: red;
+    text-shadow: 0 0 3px black;
+}
+
+.like {
+    color: red;
+}
+
+.card-size {
+    width: 96%;
+}
+
+.signup.button {
+    width: 12em;
+    background-color: #0047AB !important;
+    color: #ffffffff !important;
+}
+
+.interest.button {
+    width: 35em;
+    background-color: #0047AB !important;
+    color: #ffffffff !important;
+    align-items: center;
+    text-align: center;
+    left: 10%;
+}
+
+.logout.button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.title.is-vcentered {
+    align-items: center;
+}
+
+.message-date {
+    float: right;
+}
+
+.mt-neg {
+    margin-top: -1.5rem;
+}
+
+.sent {
+    width: 50%;
+    float: right;
+    overflow: hidden
+}
+
+.clear {
+    clear: both;
+}
+
+.recieve {
+    width: 50%;
+}
+
+.login {
+    background-color: #0047AB !important;
+    color: #ffffffff !important;
+}
+
+.login-home {
+    background-color: #233D4D !important;
+    color: #ffffffff !important;
+}
+
+.offline-icon {
+    color: #FF0000;
+}
+
+.online-icon {
+    color: #00FF00;
+}
+
+.friends-panel {
+    overflow-y: auto;
+    height: 300px;
+}
+
+.header-icon {
+    color: #266392;
+    /* 	background-color:  #209CEE; */
+}
+
+.header-button {
+    /* color: #209CEE; */
+    background-color: white;
+}
+
+.add-user-icon {
+    float: right;
+}
+
+.add-user-icon:hover {
+    color: #35AC5E;
+}
+
+.remove-user-icon {
+    float: right;
+}
+
+.remove-user-icon:hover {
+    color: red;
+}
+
+.friend-suggestion {
+    height: 40px;
+    align-items: center;
+    margin: auto;
+}
+
+.hidden-button {
+    background: none;
+    padding: 0px;
+    border: none;
+}
+
+.send-icon {
+    color: white;
+}
+
+.interests {
+    background-color: #33CC99;
+    color: white;
+}
+
+#visibility {
+    width: 10em;
+}
+
+.post-home {
+    width: 15%;
+    left: 85%;
+}
+
+.remove-friends {
+    align-items: left;
+    float: left;
+    left: 100% !important;
+}
+
+.sugg-names {
+    color: black;
+}
+
+.rem-hov:hover {
+    background: none;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+.main-posts {
+    width: 100%;
+}
+
+.search-foot {
+    left: 100%;
+}
+
+.accept-reject-foot {
+    left: 60%;
+}
+
+.comment-button {
+    background-color: #0047AB;
+    color: white;
+}
+
+.online-friends-invite {
+    width: 100%;
+}
+
+.comment-button:hover {
+    color: white;
+}
+
+.navbar {
+    background-color: #EBEBEB;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0 !important;
+    padding: 0;
+}
+
+html {
+    margin: 0 !important;
+    padding: 0;
+}
+
+.panel-heading {
+    background-color: #0047AB !important;
+}
+
+.curr-chats {
+    margin: 8.4px
+}
+
+.second {
+    overflow-y: auto;
+    height: calc(100vh - 1em);
+}
+
+.message-window {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    height: calc(100vh - 1em);
+}
+
+.recieve-date {
+    float: left;
+}
+
+.send-icon-message {
+    color: #0052c5 !important;
+    top: -3% !important;
+    pointer-events: all !important;
+    cursor: pointer !important;
+}
+
+.message-area {
+    background-color: lightgrey;
+}

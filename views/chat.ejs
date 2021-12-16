@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<%- include('header') -%>
+
+    <head>
+        <title>Chat</title>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <script language="javascript" type="text/javascript" src="../js/chatscript.js"></script>
+    </head>
+
+    <body>
+
+        <%if (error !=null) { %>
+            <font color="red">
+                <%= error %>
+                    <p>
+                        <% } %>
+                            <!-- This is where old chat messages are initially loaded -->
+                            <div class='columns'>
+                                <div class='column is-3 has-text-centered'>
+                                    <article class="ml-4 panel is-link">
+                                        <p class="panel-heading pb-1 pt-2">
+                                            Users in Chat
+                                        </p>
+                                        <% for (const item of users.Items) { %>
+                                            <a class='ml-1' href="/wall?user=<%= item.username.S %>">
+                                                <%= item.first.S %>
+                                                    <%= item.last.S %>
+                                            </a><br>
+                                            <% } %>
+                                    </article>
+
+                                </div>
+                                <div class='column is-6  message-window mt-3'>
+                                    <span class='wrapper'>
+                                        <div id="chatbox">
+                                            <% messages.forEach(function(msg) { if (user.trim()==msg.username.S.trim())
+                                                { %>
+                                                <div>
+                                                    <article class="message is-info sent">
+                                                        <div class="message-header">
+                                                            <figure class="image is-rounded is-48x48">
+                                                                <img class='is-rounded '
+                                                                    src="https://g29profilepictures.s3.amazonaws.com/<%=msg.username.S.trim()%>"
+                                                                    onerror="this.onerror=null; this.src='https://g29profilepictures.s3.amazonaws.com/default.jpg'">
+                                                            </figure>
+                                                            <p>
+                                                                <%=msg.sender.S%>
+                                                            </p>
+                                                        </div>
+                                                        <div class="message-body">
+                                                            <%=msg.content.S%>
+                                                        </div>
+                                                    </article>
+                                                    <div class='clear mt-0 pt-0'>
+                                                        <p class='message-date mt-neg'>
+                                                            <%=msg.datetime.S%>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <% } else { %>
+                                                    <div>
+                                                        <span>
+                                                            <article class="message is-success recieve">
+                                                                <div class="message-header">
+                                                                    <figure class="image is-rounded is-48x48">
+                                                                        <img class='is-rounded'
+                                                                            src="https://g29profilepictures.s3.amazonaws.com/<%=msg.username.S.trim()%>"
+                                                                            onerror="this.onerror=null; this.src='https://g29profilepictures.s3.amazonaws.com/default.jpg'">
+                                                                    </figure>
+                                                                    <p style='float: left;'>
+                                                                        <%=msg.sender.S%>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="message-body">
+                                                                    <%=msg.content.S%>
+                                                                </div>
+                                                            </article>
+                                                            <p class='recieve-date mt-neg'>
+                                                                <%=msg.datetime.S%>
+                                                            </p>
+                                                        </span>
+                                                    </div>
+                                                    <% } }); %>
+                                        </div>
+                                        <div class="field">
+                                            <p class="control has-icons-right">
+                                                <input type="text" class='input  send-input' id="input"
+                                                    name="messageField" placeholder='Chat Message'>
+                                                <button type="button" class='hidden-button' id="formSubmit"
+                                                    onclick="return sendChat();">
+                                                    <span class="icon fa-lg is-right">
+                                                        <i class="fas fa-paper-plane icon send-icon-message"></i>
+                                                    </span>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class='message-area'>
+                                            <form onsubmit="return sendChat()">
+                                            </form>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class='column is-3 has-text-centered'>
+                                    <button type="button" class='button mb-2 comment-button' id="invite"
+                                        onclick="location.href='/getgroupchatinvite?id=<%= id%>'">Invite Friends to
+                                        Chat</button>
+                                    <br>
+                                    <form action="/leaveroom?id=<%= id%>" method="POST">
+                                        <button class='button'>
+                                            <span class="icon-text">
+                                                <span class="icon">
+                                                    <i class="ml-2 fas fa-door-open icon fas fa-2x"></i>
+                                                </span>
+                                                <span class='pl-4 ml-2'>Leave Chat</span>
+                                            </span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div style="display:none" id="username">
+                                <%= username %>
+                            </div>
+                            <div style="display:none" id="user">
+                                <%= user %>
+                            </div>
+
+    </body>
+
+</html>

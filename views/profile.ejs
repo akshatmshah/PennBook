@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<%- include('header') -%>
+<html><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/base.css">
+<script language="javascript" type="text/javascript" src="../js/profile.js"></script>
+<script src="../js/profilescript.js"></script>
+<head>
+	<title>Preferences</title>
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+      <div class="columns">
+      	<div class="column">
+      	<figure  class="image is-128x128">
+      	<img style = "float: left;" class='is-rounded is-flex' src="https://g29profilepictures.s3.amazonaws.com/<%= user %>"  onerror="this.onerror=null; this.src='https://g29profilepictures.s3.amazonaws.com/default.jpg'">
+      	</figure>
+      	</div>
+      	<div class="column">
+      	<form method="post" action="/upload" enctype="multipart/form-data">
+		  <input type="file" id="myFile" name="myFile">
+		  <input type="submit" class= "input mt-2" value="Upload">
+		</form>
+      	</div>
+      </div>
+      <h4 style="color:red;" class="message">
+                    <%= message %>
+ 	  </div>
+      <div class="column is-half has-text-centered">
+      	<form action="/updateaffiliation" method="post" class="updateform">
+		  	<div class="field has-addons">
+			  <p class="control">
+		          <a class="button is-static signup">
+		            New Affiliation
+		          </a>
+	          </p>
+	          <input class = "input" type="text" name="affiliation" id="affiliation">
+			  </div>
+			<input type="submit" class= "input" value="Update">
+		</form>
+		<form action="/updatepassword" method="post" class="updateform mt-2">
+			<div class="field has-addons">
+			  <p class="control">
+		          <a class="button is-static signup">
+		            Old Password
+		          </a>
+	          </p>
+	          <input class = "input" type="text" name="old_password" id="old_password">
+			</div>
+		  	<div class="field has-addons">
+			  <p class="control">
+		          <a class="button is-static signup">
+		            New Password
+		          </a>
+	          </p>
+	          <input class = "input" type="text" name="password1" id="password1">
+			</div>
+			<div class="field has-addons">
+			  <p class="control">
+		          <a class="button is-static signup">
+		            Retype New Password
+		          </a>
+	          </p>
+	          <input class = "input" type="text" name="password2" id="password2">
+			</div>
+		    <input type="submit" class= "input" value="Update">
+		</form>
+		<form action="/updateemail" method="post" class="updateform mt-2">
+		  	<div class="field has-addons">
+			  <p class="control">
+		          <a class="button is-static signup">
+		            New Email
+		          </a>
+	          </p>
+	          <input class = "input" type="text" name="email" id="email">
+			  </div>
+		    <input type="submit" class= "input" value="Update">
+		</form>
+		<form action="/updateinterests" method="post" class="updateform">
+		  	<div class="field has-addons is-centered">
+			  <p class="control">
+		          <a class="button is-static interest mt-2">
+		            Interests
+		          </a>
+	          </p>
+	        </div>
+	            <input type="checkbox" name="interests" value="ARTS" <% if (interests.includes("ARTS")) {%> checked <% } %>> Arts
+			    <input type="checkbox" name="interests" value="ARTS & CULTURE" <% if (interests.includes("ARTS & CULTURE")) {%> checked <% } %>> Arts & Culture
+			    <input type="checkbox" name="interests" value="BLACK VOICES" <% if (interests.includes("BLACK VOICES")) {%> checked <% } %>> Black Voices
+			    <input type="checkbox" name="interests" value="BUSINESS" <% if (interests.includes("BUSINESS")) {%> checked <% } %>> Business
+			    <input type="checkbox" name="interests" value="COLLEGE" <% if (interests.includes("COLLEGE")) {%> checked <% } %>> College
+			    <input type="checkbox" name="interests" value="COMEDY" <% if (interests.includes("COMEDY")) {%> checked <% } %>> Comedy
+			    <input type="checkbox" name="interests" value="CRIME" <% if (interests.includes("CRIME")) {%> checked <% } %>> Crime <br>
+			    <input type="checkbox" name="interests" value="CULTURE & ARTS" <% if (interests.includes("CULTURE & ARTS")) {%> checked <% } %>> Culture & Arts
+			    <input type="checkbox" name="interests" value="DIVORCE" <% if (interests.includes("DIVORCE")) {%> checked <% } %>> Divorce
+			    <input type="checkbox" name="interests" value="EDUCATION" <% if (interests.includes("EDUCATION")) {%> checked <% } %>> Education
+			    <input type="checkbox" name="interests" value="ENTERTAINMENT" <% if (interests.includes("ENTERTAINMENT")) {%> checked <% } %>> Entertainment
+			    <input type="checkbox" name="interests" value="ENVIRONMENT" <% if (interests.includes("ENVIRONMENT")) {%> checked <% } %>> Environment
+			    <input type="checkbox" name="interests" value="FIFTY" <% if (interests.includes("FIFTY")) {%> checked <% } %>> Fifty<br>
+			    <input type="checkbox" name="interests" value="FOOD & DRINK" <% if (interests.includes("FOOD & DRINK")) {%> checked <% } %>> Food & Drink
+			    <input type="checkbox" name="interests" value="GREEN" <% if (interests.includes("GREEN")) {%> checked <% } %>> Green
+			    <input type="checkbox" name="interests" value="HEALTHY LIVING" <% if (interests.includes("HEALTHY LIVING")) {%> checked <% } %>> Healthy Living
+			    <input type="checkbox" name="interests" value="HOME & LIVING" <% if (interests.includes("HOME & LIVING")) {%> checked <% } %>> Home & Living
+			    <input type="checkbox" name="interests" value="IMPACT" <% if (interests.includes("IMPACT")) {%> checked <% } %>> Impact
+			    <input type="checkbox" name="interests" value="LATINO VOICES" <% if (interests.includes("LATINO VOICES")) {%> checked <% } %>> Latino Voices <br>
+			    <input type="checkbox" name="interests" value="MEDIA" <% if (interests.includes("MEDIA")) {%> checked <% } %>> Media
+			    <input type="checkbox" name="interests" value="MONEY" <% if (interests.includes("MONEY")) {%> checked <% } %>> Money
+			    <input type="checkbox" name="interests" value="PARENTING" <% if (interests.includes("PARENTING")) {%> checked <% } %>> Parenting
+			    <input type="checkbox" name="interests" value="PARENTS" <% if (interests.includes("PARENTS")) {%> checked <% } %>> Parents
+			    <input type="checkbox" name="interests" value="POLITICS" <% if (interests.includes("POLITICS")) {%> checked <% } %>> Politics
+			    <input type="checkbox" name="interests" value="QUEER VOICES" <% if (interests.includes("QUEER VOICES")) {%> checked <% } %>> Queer Voices
+			    <input type="checkbox" name="interests" value="RELIGION" <% if (interests.includes("RELIGION")) {%> checked <% } %>> Religion
+			    <input type="checkbox" name="interests" value="SCIENCE" <% if (interests.includes("SCIENCE")) {%> checked <% } %>> Science<br>
+			    <input type="checkbox" name="interests" value="SPORTS" <% if (interests.includes("SPORTS")) {%> checked <% } %>> Sports
+			    <input type="checkbox" name="interests" value="STYLE" <% if (interests.includes("STYLE")) {%> checked <% } %>> Style
+			    <input type="checkbox" name="interests" value="STYLE & BEAUTY" <% if (interests.includes("STYLE & BEAUTY")) {%> checked <% } %>> Style & Beauty
+			    <input type="checkbox" name="interests" value="TASTE" <% if (interests.includes("TASTE")) {%> checked <% } %>> Taste
+			    <input type="checkbox" name="interests" value="TECH" <% if (interests.includes("TECH")) {%> checked <% } %>> Tech
+			    <input type="checkbox" name="interests" value="THE WORLDPOST" <% if (interests.includes("THE WORLDPOST")) {%> checked <% } %>> The Worldpost
+			    <input type="checkbox" name="interests" value="TRAVEL" <% if (interests.includes("TRAVEL")) {%> checked <% } %>> Travel
+			    <input type="checkbox" name="interests" value="WEDDINGS" <% if (interests.includes("WEDDINGS")) {%> checked <% } %>> Weddings <br>
+			    <input type="checkbox" name="interests" value="WEIRD NEWS" <% if (interests.includes("WEIRD NEWS")) {%> checked <% } %>> Weird News
+			    <input type="checkbox" name="interests" value="WELLNESS" <% if (interests.includes("WELLNESS")) {%> checked <% } %>> Wellness
+			    <input type="checkbox" name="interests" value="WOMEN" <% if (interests.includes("WOMEN")) {%> checked <% } %>> Women
+			    <input type="checkbox" name="interests" value="WORLD NEWS" <% if (interests.includes("WORLD NEWS")) {%> checked <% } %>> World News
+			    <input type="checkbox" name="interests" value="WORLDPOST" <% if (interests.includes("WORLDPOST")) {%> checked <% } %>> Worldpost
+		    <input type="submit" class= "input" value="Update">
+		</form>
+      </div>
+      <div class="column has-text-centered">
+      	<form action="/updatevisibility" method="post" class="updateform">
+		  	<div class="field has-addons">
+			  <p class="control">
+		          <a class="button is-static signup">
+		            New Visibility
+		          </a>
+	          </p>
+	          <div class='select is-info'>
+	          <select id="visibility" name="visibility">
+			    <option value="public">Public</option>
+			    <option value="private">Private</option>
+			  </select>
+			  </div>
+			  </div>
+		    <input type="submit" class= "input" value="Update">
+		</form>
+	  </div>
+    </div>
+</section>
+</body>
+</html>
