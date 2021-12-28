@@ -2,7 +2,7 @@
 <div id="top"></div>
 
 <h1 align="center">PennBook</h1>
-<h3 align='center'>In collaboration with David Feng, Patrick Kehinde, and Aisha Olapade</h3>
+<h3 align='center'>David Feng, Patrick Kehinde, Aisha Olapade, and Akshat Shah</h3>
 
 
 
@@ -129,10 +129,10 @@ npm install npm@latest -g
  2. To change the port navigate to app.js.
  
   #### Homepage
-<img src='images/chat.png' alt="alt text" width="800" height = "600"/>
+<img src='images/chat.png' alt="alt text" width="600" height = "400"/>
 
   #### Chat
- <img src='images/home.png' alt="alt text" width="800" height = "600"/>
+ <img src='images/home.png' alt="alt text" width="600" height = "400"/>
  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
