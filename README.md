@@ -12,6 +12,8 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+      <a href="#description-of-technical-features">Description of Technical Features</a>
+      <a href="#adsorption-algorithm">Adsorption Algorithm</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
