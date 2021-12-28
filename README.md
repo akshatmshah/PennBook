@@ -2,7 +2,7 @@
 <div id="top"></div>
 
 <h1 align="center">PennBook</h1>
-<h2>In collaboration with David Feng, Patrick Kehinde, and Aisha Olapade</h2>
+<h3>In collaboration with David Feng, Patrick Kehinde, and Aisha Olapade</h3>
 
 
 
