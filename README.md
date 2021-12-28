@@ -10,14 +10,10 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <a href="#description-of-technical-features">Description of Technical Features</a>
-      <a href="#adsorption-algorithm">Adsorption Algorithm</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#description-of-technical-features">Description of Technical Features</a></li>
+    <li><a href="#adsorption-algorithm">Adsorption Algorithm</a></li>
+    <li><a href="#built-with">Built With</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
