@@ -128,9 +128,10 @@ npm install npm@latest -g
  
   #### Homepage
 <img src='images/chat.png' alt="alt text" width="600" height = "400"/>
-
   #### Chat
  <img src='images/home.png' alt="alt text" width="600" height = "400"/>
+ #### Wall
+ <img src='images/wall.png' alt="alt text" width="600" height = "400"/>
  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
