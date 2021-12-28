@@ -128,10 +128,10 @@ npm install npm@latest -g
   
  2. To change the port navigate to app.js.
  
-  #### Audio
+  #### Homepage
 <img src='images/chat.png' alt="alt text" width="800" height = "600"/>
 
-  #### No Audio
+  #### Chat
  <img src='images/home.png' alt="alt text" width="800" height = "600"/>
  
 
