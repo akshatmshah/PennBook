@@ -11,7 +11,17 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#description-of-technical-features">Description of Technical Features</a></li>
+    <li>
+      <a href="#description-of-technical-features">Description of Technical Features</a>
+      <ul>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#signup">Signup</a></li>
+        <li><a href="#homepage-and-walls">Login</a></li>
+        <li><a href="#chats">Chatrooms</a></li>
+        <li><a href="#news-recommendation">News Recommendation</a></li>
+        <li><a href="#scalability-and-information-storage">Scalability and Information Storage</a></li>
+      </ul>
+    </li>
     <li><a href="#adsorption-algorithm">Adsorption Algorithm</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li>
