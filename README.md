@@ -105,7 +105,9 @@ First, we scanned tables to get each edge in the graph, then we will use the ads
 * [Stemmer](https://github.com/words/stemmer)
 <p align="right">(<a href="#top">back to top</a>)</p
 <!-- GETTING STARTED -->
+  
 ## Getting Started
+  
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
