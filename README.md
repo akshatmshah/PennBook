@@ -87,8 +87,6 @@ As a general note, the route for the newsfeed algorithm that runs whenever a use
 
 First, we scanned tables to get each edge in the graph, then we will use the adsorption algorithm on: the friends table for Friend relationships, the articles table for categories, the interests table for user interests, and the articleLikes table for article likes. Then, using a combination of the reduceByKey and mapToPair operations we made a series of node transfer RDDs to show the specified distribution of weight across each type of edge. By joining the PairRDDs for edges and node transfers we made EdgeTransfer RDDs that hold the source, destination, and edge weight. We merge all the EdgeTransfer RDDs of the different edge types to make one huge EdgeTransferRDD. We initialize a label weight RDD such that the only labels that exist are the nodes representing users having their own name as a label with a score of 1. At this point all other label node pairings would have a score of 0. We consistently update propagate RDDS to model the push of label weight scores throughout 15 iterations (if convergence is not met before). Every round the label weights are normalized, making the sum of the scores 1. If the previous weight and the updated weight does not have a disparity greater than 0.15, then we say this has converged. At the end we load the article score for user to article pairings to userArticleScores table.
 
-
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
