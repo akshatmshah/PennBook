@@ -153,11 +153,17 @@ npm install npm@latest -g
 # Images
  
 <h3 align='center'>Chats</h3>
-<img src='images/chat.png' align='center' alt="alt text" width="800" height = "600"/>
+<p align="center">
+<img src='images/chat.png' alt="alt text" width="800" height = "600"/>
+</p>
 <h3 align='center'>Homepage</h3>
-<img src='images/home.png' align='center' alt="alt text" width="800" height = "600"/>
+<p align="center">
+<img src='images/home.png' alt="alt text" width="800" height = "600"/>
+</p>
 <h3 align='center'>Walls</h3>
-<img src='images/wall.png' align='center' alt="alt text" width="800" height = "600"/>
+<p align="center">
+<img src='images/wall.png' alt="alt text" width="800" height = "600"/>
+</p>
  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
