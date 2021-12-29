@@ -104,9 +104,6 @@ First, we scanned tables to get each edge in the graph, then we will use the ads
 * [LRU Cache](https://github.com/isaacs/node-lru-cache#readme)
 * [Stemmer](https://github.com/words/stemmer)
 <p align="right">(<a href="#top">back to top</a>)</p
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 <!-- GETTING STARTED -->
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
@@ -135,6 +132,7 @@ npm install npm@latest -g
    ```sh
    npm install
    ```
+   
  <p align="right">(<a href="#top">back to top</a>)</p>
 
 
