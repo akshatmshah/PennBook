@@ -16,7 +16,7 @@
       <ul>
         <li><a href="#login">Login</a></li>
         <li><a href="#signup">Signup</a></li>
-        <li><a href="#homepage-and-walls">Login</a></li>
+        <li><a href="#homepage-and-walls">Homepage and Walls</a></li>
         <li><a href="#chats">Chatrooms</a></li>
         <li><a href="#news-recommendation">News Recommendation</a></li>
         <li><a href="#scalability-and-information-storage">Scalability and Information Storage</a></li>
