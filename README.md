@@ -79,6 +79,8 @@ An important component to note is storing the reversal of some tables. Given any
 
 As has been previously mentioned, we only persistently store information that is already public like affiliation, username, and full name in the cookies of our session, ensuring security. Additionally, all data for our application is stored on DynamoDB, and our newsfeed algorithm runs on Apache Livy, both of which are very scalable, thus our implementation is scalable.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Adsorption Algorithm 
 
 As a general note, the route for the newsfeed algorithm that runs whenever a user updates an interest runs a shell script that is specifically designed to download maven on EC2, so if you run it locally it won’t do anything. This script takes a while upon running for the first time on a new cluster because it needs to download maven. In order to run locally, simply cd to the newsfeed directory, and then run mvn package, and then mvn exec:java@loader
@@ -106,7 +108,7 @@ First, we scanned tables to get each edge in the graph, then we will use the ads
 <p align="right">(<a href="#top">back to top</a>)</p
 
 
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 <!-- GETTING STARTED -->
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
