@@ -148,10 +148,13 @@ npm install npm@latest -g
    ``` 
   
  2. To change the port navigate to app.js.
+
+
+# Images
  
-  #### Homepage
+ #### Homepage
 <img src='images/chat.png' alt="alt text" width="600" height = "400"/>
-  #### Chat
+ #### Chat
  <img src='images/home.png' alt="alt text" width="600" height = "400"/>
  #### Wall
  <img src='images/wall.png' alt="alt text" width="600" height = "400"/>
