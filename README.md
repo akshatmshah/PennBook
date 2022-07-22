@@ -4,6 +4,22 @@
 <h1 align="center">PennBook</h1>
 <h3 align='center'>David Feng, Patrick Kehinde, Aisha Olapade, and Akshat Shah</h3>
 
+# Images
+ 
+<h3 align='center'>Chats</h3>
+<p align="center">
+<img src='images/chat.png' alt="alt text" width="800" height = "600"/>
+</p>
+<h3 align='center'>Homepage</h3>
+<p align="center">
+<img src='images/home.png' alt="alt text" width="800" height = "600"/>
+</p>
+<h3 align='center'>Walls</h3>
+<p align="center">
+<img src='images/wall.png' alt="alt text" width="800" height = "600"/>
+</p>
+ 
+
 
 
 <!-- TABLE OF CONTENTS -->
@@ -150,21 +166,7 @@ npm install npm@latest -g
  2. To change the port navigate to app.js.
 
 
-# Images
- 
-<h3 align='center'>Chats</h3>
-<p align="center">
-<img src='images/chat.png' alt="alt text" width="800" height = "600"/>
-</p>
-<h3 align='center'>Homepage</h3>
-<p align="center">
-<img src='images/home.png' alt="alt text" width="800" height = "600"/>
-</p>
-<h3 align='center'>Walls</h3>
-<p align="center">
-<img src='images/wall.png' alt="alt text" width="800" height = "600"/>
-</p>
- 
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
